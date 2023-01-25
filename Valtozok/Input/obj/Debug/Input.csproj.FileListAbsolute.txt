@@ -1,0 +1,7 @@
+D:\rud\kodtarak\13d_2023\Valtozok\Input\bin\Debug\Input.exe.config
+D:\rud\kodtarak\13d_2023\Valtozok\Input\bin\Debug\Input.exe
+D:\rud\kodtarak\13d_2023\Valtozok\Input\bin\Debug\Input.pdb
+D:\rud\kodtarak\13d_2023\Valtozok\Input\obj\Debug\Input.csproj.CoreCompileInputs.cache
+D:\rud\kodtarak\13d_2023\Valtozok\Input\obj\Debug\Input.exe
+D:\rud\kodtarak\13d_2023\Valtozok\Input\obj\Debug\Input.pdb
+D:\rud\kodtarak\13d_2023\Valtozok\Input\obj\Debug\Input.csproj.AssemblyReference.cache

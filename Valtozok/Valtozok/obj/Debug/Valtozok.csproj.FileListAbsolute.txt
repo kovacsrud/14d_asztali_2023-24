@@ -1,0 +1,7 @@
+D:\rud\kodtarak\13d_2023\Valtozok\Valtozok\bin\Debug\Valtozok.exe.config
+D:\rud\kodtarak\13d_2023\Valtozok\Valtozok\bin\Debug\Valtozok.exe
+D:\rud\kodtarak\13d_2023\Valtozok\Valtozok\bin\Debug\Valtozok.pdb
+D:\rud\kodtarak\13d_2023\Valtozok\Valtozok\obj\Debug\Valtozok.csproj.AssemblyReference.cache
+D:\rud\kodtarak\13d_2023\Valtozok\Valtozok\obj\Debug\Valtozok.csproj.CoreCompileInputs.cache
+D:\rud\kodtarak\13d_2023\Valtozok\Valtozok\obj\Debug\Valtozok.exe
+D:\rud\kodtarak\13d_2023\Valtozok\Valtozok\obj\Debug\Valtozok.pdb
