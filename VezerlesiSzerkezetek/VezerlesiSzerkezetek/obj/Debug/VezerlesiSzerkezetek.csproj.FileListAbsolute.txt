@@ -1,0 +1,6 @@
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\VezerlesiSzerkezetek\bin\Debug\VezerlesiSzerkezetek.exe.config
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\VezerlesiSzerkezetek\bin\Debug\VezerlesiSzerkezetek.exe
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\VezerlesiSzerkezetek\bin\Debug\VezerlesiSzerkezetek.pdb
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\VezerlesiSzerkezetek\obj\Debug\VezerlesiSzerkezetek.csproj.CoreCompileInputs.cache
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\VezerlesiSzerkezetek\obj\Debug\VezerlesiSzerkezetek.exe
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\VezerlesiSzerkezetek\obj\Debug\VezerlesiSzerkezetek.pdb

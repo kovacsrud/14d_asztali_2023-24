@@ -1,0 +1,7 @@
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Elagazasok\bin\Debug\Elagazasok.exe.config
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Elagazasok\bin\Debug\Elagazasok.exe
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Elagazasok\bin\Debug\Elagazasok.pdb
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Elagazasok\obj\Debug\Elagazasok.csproj.CoreCompileInputs.cache
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Elagazasok\obj\Debug\Elagazasok.exe
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Elagazasok\obj\Debug\Elagazasok.pdb
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Elagazasok\obj\Debug\Elagazasok.csproj.AssemblyReference.cache
