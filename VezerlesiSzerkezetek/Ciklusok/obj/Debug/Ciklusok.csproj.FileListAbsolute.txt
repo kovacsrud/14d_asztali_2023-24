@@ -4,3 +4,4 @@ D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Ciklusok\bin\Debug\Cikluso
 D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Ciklusok\obj\Debug\Ciklusok.csproj.CoreCompileInputs.cache
 D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Ciklusok\obj\Debug\Ciklusok.exe
 D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Ciklusok\obj\Debug\Ciklusok.pdb
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Ciklusok\obj\Debug\Ciklusok.csproj.AssemblyReference.cache

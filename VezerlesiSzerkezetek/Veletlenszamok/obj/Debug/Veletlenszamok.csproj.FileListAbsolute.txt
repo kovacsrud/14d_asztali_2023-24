@@ -1,0 +1,6 @@
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Veletlenszamok\bin\Debug\Veletlenszamok.exe.config
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Veletlenszamok\bin\Debug\Veletlenszamok.exe
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Veletlenszamok\bin\Debug\Veletlenszamok.pdb
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Veletlenszamok\obj\Debug\Veletlenszamok.csproj.CoreCompileInputs.cache
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Veletlenszamok\obj\Debug\Veletlenszamok.exe
+D:\rud\kodtarak\13d_asztali_2023\VezerlesiSzerkezetek\Veletlenszamok\obj\Debug\Veletlenszamok.pdb

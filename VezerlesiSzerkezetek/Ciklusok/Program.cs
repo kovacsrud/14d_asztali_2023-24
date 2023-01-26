@@ -45,6 +45,18 @@ namespace Ciklusok
 
             } while (szam<10);
 
+            //Kérjen be egy egész számot a billentyűzetről!
+            //Amennyiben a szám 100-nál nagyobb, akkor
+            //ne fogadja el, adjon hibaüzenetet és kérje
+            //be újra!
+
+            int inSzam = Convert.ToInt32(Console.ReadLine());
+            while (inSzam>100)
+            {
+                Console.Write("Hibás, újra!:");
+                inSzam = Convert.ToInt32(Console.ReadLine());
+            }
+
             Console.ReadKey();
         }
     }
