@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tombok", "Tombok\Tombok.csproj", "{D413EAE0-C12F-4B4B-882E-EC15EE9D98E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElemiAlgoritmusok", "ElemiAlgoritmusok\ElemiAlgoritmusok.csproj", "{09957E3D-895A-477E-A528-E4C2FB02F6DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D413EAE0-C12F-4B4B-882E-EC15EE9D98E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D413EAE0-C12F-4B4B-882E-EC15EE9D98E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D413EAE0-C12F-4B4B-882E-EC15EE9D98E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D413EAE0-C12F-4B4B-882E-EC15EE9D98E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09957E3D-895A-477E-A528-E4C2FB02F6DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09957E3D-895A-477E-A528-E4C2FB02F6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09957E3D-895A-477E-A528-E4C2FB02F6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09957E3D-895A-477E-A528-E4C2FB02F6DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E72CA6F6-0158-4FF6-922F-22E37CC591BD}
+	EndGlobalSection
+EndGlobal
