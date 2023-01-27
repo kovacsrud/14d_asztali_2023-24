@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tombok", "Tombok\Tombok.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElemiAlgoritmusok", "ElemiAlgoritmusok\ElemiAlgoritmusok.csproj", "{09957E3D-895A-477E-A528-E4C2FB02F6DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomb2d", "Tomb2d\Tomb2d.csproj", "{74E0E2F0-BCB7-4867-8020-204CABA44E0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TombTipus", "TombTipus\TombTipus.csproj", "{1EDCF25C-485C-4F5F-A2A5-EBE12C350F8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{09957E3D-895A-477E-A528-E4C2FB02F6DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09957E3D-895A-477E-A528-E4C2FB02F6DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09957E3D-895A-477E-A528-E4C2FB02F6DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74E0E2F0-BCB7-4867-8020-204CABA44E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E0E2F0-BCB7-4867-8020-204CABA44E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E0E2F0-BCB7-4867-8020-204CABA44E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E0E2F0-BCB7-4867-8020-204CABA44E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EDCF25C-485C-4F5F-A2A5-EBE12C350F8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EDCF25C-485C-4F5F-A2A5-EBE12C350F8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EDCF25C-485C-4F5F-A2A5-EBE12C350F8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EDCF25C-485C-4F5F-A2A5-EBE12C350F8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -58,6 +58,9 @@ namespace ElemiAlgoritmusok
 
             Console.WriteLine($"Min:{min},Max:{max}");
 
+            //A rendszer eszközeivel:
+            Console.WriteLine($"Összeg:{szamok.Sum()},Átlag:{szamok.Average()},Min:{szamok.Min()},Max:{szamok.Max()}");
+
             Console.ReadKey();
         }
     }
