@@ -44,6 +44,18 @@ namespace Fuggvenyek
         {
             return a / b;
         }
+
+        static int Hatvany(int szam,int kitevo)
+        {
+            return (int)Math.Pow(szam, kitevo);
+        }
+
+        //Cím szerinti paraméterátadás
+        static void Negyzet(ref int a)
+        {
+            a = a * a;
+        }
+       
         static void Main(string[] args)
         {
             Kiir("Csak egy string");
@@ -60,8 +72,11 @@ namespace Fuggvenyek
             Console.WriteLine(Osszead(11.567,6678.44566));
             Console.WriteLine(Osztas(23,1));
             Console.WriteLine(Osztas(23.678,0));
-            
-
+            Console.WriteLine(Hatvany(2,10));
+            int a = 3;
+            Negyzet(ref a);
+            Console.WriteLine(a);
+         
 
             Console.ReadKey();
         }
