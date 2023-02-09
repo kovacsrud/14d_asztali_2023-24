@@ -15,6 +15,11 @@ namespace Lotto
             //Tömbökben tároljuk a szükséges adatokat
 
             //Bekérjük, hogy mennyi számot húzunk, valamint azt, hogy mennyiből húzzuk
+
+            do
+            {
+
+            
             Console.Write("Hány számot húzunk?");
             int hanySzam = Convert.ToInt32(Console.ReadLine());
 
@@ -24,6 +29,7 @@ namespace Lotto
             int[] tippek = new int[hanySzam];
             int[] nyeroSzamok = new int[hanySzam];
             Random rand = new Random();
+            
 
             int talalatok = 0;
 
@@ -76,6 +82,12 @@ namespace Lotto
             }
 
             Console.WriteLine($"Találat:{talalatok}");
+            Console.Write("Akar még játszani?(i/n)");
+
+
+          } while (Console.ReadKey().KeyChar=='i');
+
+
 
             Console.ReadKey();
         }
