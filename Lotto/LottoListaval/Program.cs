@@ -10,6 +10,11 @@ namespace LottoListaval
     {
         static void Main(string[] args)
         {
+
+            do
+            {
+
+            
             Console.Write("Hány számot húzunk?");
             int hanySzam = Convert.ToInt32(Console.ReadLine());
 
@@ -34,7 +39,7 @@ namespace LottoListaval
                     Console.Write($"Hibás tipp!, újra{i + 1}.tipp:");
                     temp = Convert.ToInt32(Console.ReadLine());
                 }
-                
+
                 tippek.Add(temp);
             }
 
@@ -47,12 +52,29 @@ namespace LottoListaval
                 int nyeroSzamPozicio = rand.Next(0, huzoSzamok.Count);
                 int nyeroSzam = huzoSzamok[nyeroSzamPozicio];
                 huzoSzamok.RemoveAt(nyeroSzamPozicio);
-                nyeroSzamok.Add(nyeroSzam);                
+                nyeroSzamok.Add(nyeroSzam);
             }
 
             nyeroSzamok.Sort();
             Listazas(nyeroSzamok);
 
+            talalatok = TalalatSzamlalas(tippek, nyeroSzamok, talalatok);
+
+            Console.WriteLine($"Találatok száma:{talalatok}");
+            //Új játék kezdéséhez ki kell üríteni a tippek listát
+            tippek.Clear();
+            huzoSzamok.AddRange(nyeroSzamok);
+            nyeroSzamok.Clear();
+
+                Console.Write("Új játék?(i/n)");
+
+            } while (Console.ReadKey().KeyChar=='i');
+
+            Console.ReadKey();
+        }
+
+        private static int TalalatSzamlalas(List<int> tippek, List<int> nyeroSzamok, int talalatok)
+        {
             for (int i = 0; i < tippek.Count; i++)
             {
                 if (nyeroSzamok.Contains(tippek[i]))
@@ -61,9 +83,7 @@ namespace LottoListaval
                 }
             }
 
-            Console.WriteLine($"Találatok száma:{talalatok}");
-
-            Console.ReadKey();
+            return talalatok;
         }
 
         private static void Listazas(List<int> lista)
