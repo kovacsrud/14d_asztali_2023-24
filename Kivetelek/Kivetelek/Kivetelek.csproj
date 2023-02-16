@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{70ED91B3-F121-48D7-8B38-E5607738F1BF}</ProjectGuid>
+    <ProjectGuid>{0E9A8D40-9CFC-4436-A9F5-545BF6A20E62}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>OOPAlapok</RootNamespace>
-    <AssemblyName>OOPAlapok</AssemblyName>
+    <RootNamespace>Kivetelek</RootNamespace>
+    <AssemblyName>Kivetelek</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,11 +43,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ember.cs" />
-    <Compile Include="EmberProp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UjEmber.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

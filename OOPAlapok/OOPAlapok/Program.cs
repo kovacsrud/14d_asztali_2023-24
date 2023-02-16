@@ -15,11 +15,33 @@ namespace OOPAlapok
             Ember elek = new Ember("Elek","Szeged",176,78);
             Ember geza = new Ember();
 
-            ubul.SetNev("Ubul");
-            ubul.SetMagassag(190);
+            EmberProp emberp = new EmberProp("Éva","Cegléd",169,56);
 
-            Console.WriteLine(ubul.GetNev());
-            Console.WriteLine(ubul.GetMagassag());
+            Console.WriteLine(emberp.Nev);
+
+            EmberProp emberp2 = new EmberProp {
+                Nev="Tamás",
+                Magassag=188,
+                Suly=89,
+                SzuletesiHely="Orosháza"
+            };
+
+            UjEmber ujember = new UjEmber
+            {
+                Nev = "József",
+                Magassag = 199,
+                Suly = 91,
+                SzuletesiHely = "Szeged",
+                SzemelyiSzam = "37606125123"
+            };
+
+            Console.WriteLine(emberp2.Nev);
+
+            //ubul.SetNev("Ubul");
+            //ubul.SetMagassag(190);
+
+            //Console.WriteLine(ubul.GetNev());
+            //Console.WriteLine(ubul.GetMagassag());
 
             //ubul.nev = "Ubul";
             //ubul.magassag = 176;
