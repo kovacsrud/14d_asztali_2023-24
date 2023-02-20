@@ -43,8 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asztal.cs" />
+    <Compile Include="Butor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Szekreny.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
