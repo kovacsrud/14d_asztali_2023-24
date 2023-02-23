@@ -17,6 +17,13 @@ namespace Ember
             Console.WriteLine(sportolo.Eletkor());
             Console.WriteLine(sportolo.ToString());
 
+            Nyugdijas nyugdijas = new Nyugdijas("Iván", 92, 186, 1951, "mérnök");
+
+            Console.WriteLine(nyugdijas.Eletkor());
+            nyugdijas.Mozog();
+            Console.WriteLine(nyugdijas.ToString());
+
+
             Console.ReadKey();
         }
     }

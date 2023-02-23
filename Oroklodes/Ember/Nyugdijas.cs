@@ -8,6 +8,15 @@ namespace Ember
 {
     class Nyugdijas:Ember
     {
+        public Nyugdijas(string nev,int suly,int magassag,int szulev,string miVoltASzakmaja)
+        {
+            MiVoltASzakmaja = miVoltASzakmaja;
+            Nev = nev;
+            Suly = suly;
+            Magassag = magassag;
+            Szulev = szulev;
+        }
+
         public string MiVoltASzakmaja { get; set; }
 
         public override void Alszik()
@@ -27,7 +36,7 @@ namespace Ember
         
         public override string ToString()
         {
-            return base.ToString()+"Szakmája a nyugdíj előtt:"+MiVoltASzakmaja;
+            return base.ToString()+" Szakmája a nyugdíj előtt:"+MiVoltASzakmaja;
         }
     }
 }
