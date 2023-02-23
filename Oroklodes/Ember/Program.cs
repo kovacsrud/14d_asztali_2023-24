@@ -15,6 +15,7 @@ namespace Ember
             sportolo.Mozog();
             sportolo.Sportol();
             Console.WriteLine(sportolo.Eletkor());
+            Console.WriteLine(sportolo.ToString());
 
             Console.ReadKey();
         }

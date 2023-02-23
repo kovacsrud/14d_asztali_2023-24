@@ -26,5 +26,10 @@ namespace Ember
         {
             return DateTime.Now.Year - Szulev;
         }
+
+        public override string ToString()
+        {
+            return $"{Nev},{Suly},{Magassag},{Szulev}";
+        }
     }
 }

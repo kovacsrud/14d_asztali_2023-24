@@ -41,5 +41,10 @@ namespace Ember
         {
             Console.WriteLine($"A sportoló {Sportag} sportágban sportol.");
         }
+
+        public override string ToString()
+        {
+            return base.ToString()+" Sportág:"+Sportag;
+        }
     }
 }
