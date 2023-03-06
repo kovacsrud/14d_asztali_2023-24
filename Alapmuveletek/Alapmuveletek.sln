@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Alapmuveletek", "Alapmuveletek\Alapmuveletek.csproj", "{363FDEE6-6470-48FF-A78F-0238507D3F01}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlapmuveletekTest2", "AlapmuveletekTest2\AlapmuveletekTest2.csproj", "{8464434B-792F-49E0-AA8D-BE983C8AA71B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{363FDEE6-6470-48FF-A78F-0238507D3F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{363FDEE6-6470-48FF-A78F-0238507D3F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{363FDEE6-6470-48FF-A78F-0238507D3F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{363FDEE6-6470-48FF-A78F-0238507D3F01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8464434B-792F-49E0-AA8D-BE983C8AA71B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8464434B-792F-49E0-AA8D-BE983C8AA71B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8464434B-792F-49E0-AA8D-BE983C8AA71B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8464434B-792F-49E0-AA8D-BE983C8AA71B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A3930BE6-C02B-4DAB-9130-C1DB52CAE2DD}
+	EndGlobalSection
+EndGlobal
