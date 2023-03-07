@@ -77,6 +77,16 @@ namespace FajlokReadall
                 Console.WriteLine(ex.Message);                
             }
 
+            //Jelenítsük meg, hogy márka szerint csoportosítva hány autó
+            //van a listában!
+
+            var stat = autok.ToLookup(x=>new{x.Marka,x.Üzem}).OrderBy(x=>x.Count());
+
+            foreach (var i in stat)
+            {
+                Console.WriteLine($"{i.Key.Marka},{i.Key.Üzem}-{i.Count()}");
+            }
+            
 
             Console.ReadKey();
         }
