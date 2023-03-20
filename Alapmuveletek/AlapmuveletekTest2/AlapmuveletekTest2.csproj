@@ -16,4 +16,13 @@
     <ProjectReference Include="..\Alapmuveletek\Alapmuveletek.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="tesztesetek_osszeadas.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="tesztesetek_osztas.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
