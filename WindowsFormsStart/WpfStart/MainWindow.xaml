@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfStart.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfStart"
+        mc:Ignorable="d"
+        Title="WPF alkalmazás" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Szám1" HorizontalAlignment="Center" FontSize="36" VerticalAlignment="Center" />
+        <TextBox x:Name="textboxSzam1" Grid.Column="1" FontSize="30" Width="300" Height="40"/>
+        <TextBlock Text="Szám2" HorizontalAlignment="Center" FontSize="36" VerticalAlignment="Center" Grid.Row="1" />
+        <TextBox x:Name="textboxSzam2" Grid.Column="1" Grid.Row="1" FontSize="30" Width="300" Height="40"/>
+        <TextBlock Text="Szám3" HorizontalAlignment="Center" FontSize="36" VerticalAlignment="Center" Grid.Row="2" />
+        <TextBox x:Name="textboxSzam3" Grid.Column="1" Grid.Row="2" FontSize="30" Width="300" Height="40"/>
+        <TextBox x:Name="textboxEredmeny" Grid.ColumnSpan="2" Grid.Row="3" FontSize="30" Width="300" Height="40"/>
+        <Button x:Name="buttonSzamol" Content="Számolás" FontSize="26" Grid.Row="4" Width="200" Height="40" Grid.ColumnSpan="2" Click="buttonSzamol_Click" />
+
+    </Grid>
+</Window>
