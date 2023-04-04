@@ -48,6 +48,8 @@ namespace WpfDinamikus
             gomb.Background = Brushes.Aquamarine;
             gomb.Foreground = Brushes.Red;
             textblockGombSzam.Text = gomb.Content.ToString();
+            //wrapPanelGombok.Children.Remove(gomb);
+            listboxSzamok.Items.Add(gomb.Content);
 
         }
     }

@@ -11,6 +11,7 @@
             <RowDefinition Height="5*"/>
             <RowDefinition Height="5*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
         <ScrollViewer VerticalScrollBarVisibility="Visible">
         <StackPanel>
@@ -36,7 +37,8 @@
 
             </WrapPanel>
         </ScrollViewer>
-        <TextBlock x:Name="textblockGombSzam"  FontSize="30" HorizontalAlignment="Center" Grid.Row="3"/>
+        <TextBlock x:Name="textblockGombSzam"  FontSize="30" HorizontalAlignment="Center" Grid.Row="2"/>
+        <ListBox x:Name="listboxSzamok" FontSize="26" Width="150" Grid.Row="3"/>
 
     </Grid>
 </Window>
