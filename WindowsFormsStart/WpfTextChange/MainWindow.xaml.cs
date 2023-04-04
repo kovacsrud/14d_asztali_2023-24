@@ -23,6 +23,12 @@ namespace WpfTextChange
         public MainWindow()
         {
             InitializeComponent();
+            textboxMasolat.IsEnabled = false;
+        }
+
+        private void textboxSzoveg_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            textboxMasolat.Text = textboxSzoveg.Text;
         }
     }
 }

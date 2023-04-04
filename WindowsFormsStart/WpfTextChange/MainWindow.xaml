@@ -7,6 +7,51 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <TextBox x:Name="textboxSzoveg" FontSize="30" Width="400" Height="40" TextChanged="textboxSzoveg_TextChanged" />
+
+        <TextBox x:Name="textboxMasolat" FontSize="30" Width="400" Height="40"  Grid.Row="1" />
+
+        <WrapPanel Grid.Row="2">
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+        </WrapPanel>
+
+        <ScrollViewer Grid.Row="3">
+        <StackPanel >
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+            <Button Content="Gomb" FontSize="20" Margin="10" />
+
+        </StackPanel>
+        </ScrollViewer>
+
+        <DockPanel Grid.Row="4">
+            <Button Content="Gomb"  FontSize="20" Margin="10" DockPanel.Dock="Left" />
+            <Button Content="Gomb"  FontSize="20" Margin="10" DockPanel.Dock="Top" />
+            <Button Content="Gomb"  FontSize="20" Margin="10" DockPanel.Dock="Right" />
+            <Button Content="Gomb"  FontSize="20" Margin="10" DockPanel.Dock="Bottom" />
+        </DockPanel>
+
+
+
     </Grid>
 </Window>
