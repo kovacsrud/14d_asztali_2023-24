@@ -23,6 +23,19 @@ namespace WpfDinamikus
         public MainWindow()
         {
             InitializeComponent();
+            Gombok(200);
+        }
+
+        private void Gombok(int darab)
+        {
+            for (int i = 0; i < darab; i++)
+            {
+                Button gomb = new Button();
+                gomb.Width = 100;
+                gomb.Margin = new Thickness(2);
+                gomb.Content = $"{i+1}";
+                wrapPanelGombok.Children.Add(gomb);
+            }
         }
     }
 }

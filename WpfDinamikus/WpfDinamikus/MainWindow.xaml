@@ -31,13 +31,11 @@
 
         </StackPanel>
         </ScrollViewer>
-        <DockPanel Grid.Row="1">
-            <Button Content="Gomb" FontSize="30" Margin="2" DockPanel.Dock="Top" />
-            <Button Content="Gomb" FontSize="30" Margin="2" DockPanel.Dock="Bottom"/>
-            <Button Content="Gomb" FontSize="30" Margin="2" DockPanel.Dock="Left"/>
-            <Button Content="Gomb" FontSize="30" Width="200" Margin="2" DockPanel.Dock="Right"/>
-            
-        </DockPanel>
+        <ScrollViewer Grid.Row="1">
+            <WrapPanel x:Name="wrapPanelGombok">
+
+            </WrapPanel>
+        </ScrollViewer>
 
     </Grid>
 </Window>
