@@ -15,17 +15,17 @@
             <MenuItem Header="Fájl" FontSize="18">
                 <MenuItem Header="Megnyitás" FontSize="18" Click="Menu_Megnyit"/>
                 <Separator />
-                <MenuItem Header="Mentés" FontSize="18"/>
-                <MenuItem Header="Mentés másként" FontSize="18"/>
+                <MenuItem Header="Mentés" FontSize="18" Click="Menu_Mentes"/>
+                <MenuItem Header="Mentés másként" FontSize="18" Click="Menu_MentesMaskent"/>
                 <Separator />
                 <MenuItem Header="Kilépés" FontSize="18" Click="Menu_Kilepes"/>
 
             </MenuItem>
             <MenuItem Header="Szerkesztés" FontSize="18">
-                <MenuItem Header="Kivágás" FontSize="18"/>
-                <MenuItem Header="Másolás" FontSize="18"/>
+                <MenuItem Header="Kivágás" x:Name="menuitemKivagas" FontSize="18" IsEnabled="False" Click="Menu_Kivagas"/>
+                <MenuItem Header="Másolás" x:Name="menuitemMasolas" FontSize="18" IsEnabled="false" Click="Menu_Masolas"/>
                 <Separator />
-                <MenuItem Header="Beillesztés" FontSize="18"/>
+                <MenuItem Header="Beillesztés" x:Name="menuitemBeillesztes" FontSize="18" IsEnabled="False" Click="Menu_Beillesztes"/>
 
             </MenuItem>
             <MenuItem Header="Súgó" FontSize="18">
@@ -34,7 +34,7 @@
 
         </Menu>
 
-        <TextBox x:Name="textboxSzoveg" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Grid.Row="1" FontSize="24"/>
+        <TextBox x:Name="textboxSzoveg" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Grid.Row="1" FontSize="24" SelectionChanged="textboxSzoveg_SelectionChanged"/>
 
 
     </Grid>

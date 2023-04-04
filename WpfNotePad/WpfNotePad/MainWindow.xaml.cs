@@ -59,12 +59,80 @@ namespace WpfNotePad
 
         private void Menu_Mentes(object sender, RoutedEventArgs e)
         {
+            if (this.Title=="Notepad")
+            {
+                MentesMaskent();
+            } else
+            {
+                try
+                {
+                    File.WriteAllText(this.Title, textboxSzoveg.Text, Encoding.Default);
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.Message);
+                }
+            }
 
         }
 
         private void Menu_MentesMaskent(object sender, RoutedEventArgs e)
         {
+            MentesMaskent();
+        }
 
+        private void MentesMaskent()
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "szöveg (*.txt)|*.txt|adatfájl (*.csv)|*.csv|minden fájl (*.*)|*.*";
+
+            if (dialog.ShowDialog()==true)
+            {
+                try
+                {
+                    File.WriteAllText(dialog.FileName, textboxSzoveg.Text, Encoding.Default);
+                    this.Title = dialog.FileName;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);                    
+                }
+            }
+
+        }
+
+        private void Menu_Kivagas(object sender,RoutedEventArgs e)
+        {
+
+        }
+
+        private void Menu_Masolas(object sender, RoutedEventArgs e)
+        {
+            if (textboxSzoveg.SelectedText.Length>0)
+            {
+                Clipboard.SetText(textboxSzoveg.SelectedText);
+                menuitemBeillesztes.IsEnabled = true;
+            }
+        }
+        private void Menu_Beillesztes(object sender, RoutedEventArgs e)
+        {
+            var vagolapSzoveg = Clipboard.GetText();
+            textboxSzoveg.Text = textboxSzoveg.Text.Insert(textboxSzoveg.CaretIndex,vagolapSzoveg);
+        }
+
+        private void textboxSzoveg_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+            if (textboxSzoveg.SelectedText.Length>0)
+            {
+                menuitemKivagas.IsEnabled = true;
+                menuitemMasolas.IsEnabled = true;
+            }
+            if (textboxSzoveg.SelectedText.Length < 1)
+            {
+                menuitemKivagas.IsEnabled = false;
+                menuitemMasolas.IsEnabled = false;
+            }
         }
     }
 }
