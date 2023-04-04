@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
         <Menu x:Name="mainMenu">
             <MenuItem Header="Fájl" FontSize="18">
-                <MenuItem Header="Megnyitás" FontSize="18"/>
+                <MenuItem Header="Megnyitás" FontSize="18" Click="Menu_Megnyit"/>
                 <Separator />
                 <MenuItem Header="Mentés" FontSize="18"/>
                 <MenuItem Header="Mentés másként" FontSize="18"/>

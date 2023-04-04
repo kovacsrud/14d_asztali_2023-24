@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +36,35 @@ namespace WpfNotePad
         {
             Nevjegy nevjegy = new Nevjegy();
             nevjegy.ShowDialog();
+        }
+
+        private void Menu_Megnyit(object sender,RoutedEventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "szöveg (*.txt)|*.txt|adatfájl (*.csv)|*.csv|minden fájl (*.*)|*.*";
+            if (dialog.ShowDialog()==true)
+            {
+                try
+                {
+                    textboxSzoveg.Text = File.ReadAllText(dialog.FileName,Encoding.Default);
+                    this.Title = dialog.FileName;
+                    //this.Title = dialog.FileName.Split('\\').Last();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);                    
+                }
+            }
+        }
+
+        private void Menu_Mentes(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Menu_MentesMaskent(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
