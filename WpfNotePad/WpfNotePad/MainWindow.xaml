@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfNotePad"
         mc:Ignorable="d"
-        Title="Notepad" Height="450" Width="800">
+        Title="Notepad" Height="450" Width="800" Closing="Window_Closing">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -34,7 +34,7 @@
 
         </Menu>
 
-        <TextBox x:Name="textboxSzoveg" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Grid.Row="1" FontSize="24" SelectionChanged="textboxSzoveg_SelectionChanged"/>
+        <TextBox x:Name="textboxSzoveg" AcceptsReturn="True" AcceptsTab="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Visible" Grid.Row="1" FontSize="24" SelectionChanged="textboxSzoveg_SelectionChanged" TextChanged="textboxSzoveg_TextChanged"/>
 
 
     </Grid>

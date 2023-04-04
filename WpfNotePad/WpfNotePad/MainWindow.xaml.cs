@@ -22,6 +22,7 @@ namespace WpfNotePad
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool modositva = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +30,18 @@ namespace WpfNotePad
 
         private void Menu_Kilepes(object sender,RoutedEventArgs e)
         {
-            Environment.Exit(0);
+            if (modositva)
+            {
+                var valasz = MessageBox.Show("Akarja menteni a változásokat?", "Figyelem!", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+                if (valasz==MessageBoxResult.OK)
+                {
+                    MentesMaskent();
+                } else
+                {
+                    Environment.Exit(0);
+                }
+            }
+            
         }
 
         private void Menu_Nevjegy(object sender,RoutedEventArgs e)
@@ -49,6 +61,7 @@ namespace WpfNotePad
                     textboxSzoveg.Text = File.ReadAllText(dialog.FileName,Encoding.Default);
                     this.Title = dialog.FileName;
                     //this.Title = dialog.FileName.Split('\\').Last();
+                    modositva = false;
                 }
                 catch (Exception ex)
                 {
@@ -67,6 +80,7 @@ namespace WpfNotePad
                 try
                 {
                     File.WriteAllText(this.Title, textboxSzoveg.Text, Encoding.Default);
+                    modositva = false;
                 }
                 catch (Exception ex)
                 {
@@ -93,6 +107,7 @@ namespace WpfNotePad
                 {
                     File.WriteAllText(dialog.FileName, textboxSzoveg.Text, Encoding.Default);
                     this.Title = dialog.FileName;
+                    modositva = false;
                 }
                 catch (Exception ex)
                 {
@@ -104,7 +119,13 @@ namespace WpfNotePad
 
         private void Menu_Kivagas(object sender,RoutedEventArgs e)
         {
+            if (textboxSzoveg.SelectedText.Length>0)
+            {
+                Clipboard.SetText(textboxSzoveg.SelectedText);
 
+                textboxSzoveg.Text = textboxSzoveg.Text.Remove(textboxSzoveg.CaretIndex,textboxSzoveg.SelectedText.Length);
+                menuitemBeillesztes.IsEnabled = true;
+            }
         }
 
         private void Menu_Masolas(object sender, RoutedEventArgs e)
@@ -132,6 +153,25 @@ namespace WpfNotePad
             {
                 menuitemKivagas.IsEnabled = false;
                 menuitemMasolas.IsEnabled = false;
+            }
+        }
+
+        private void textboxSzoveg_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            modositva = true;
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (modositva)
+            {
+                var valasz = MessageBox.Show("Akarja menteni a változásokat?", "Figyelem!", MessageBoxButton.OKCancel, MessageBoxImage.Question);
+                if (valasz == MessageBoxResult.OK)
+                {
+                    MentesMaskent();
+                }
+                
             }
         }
     }
