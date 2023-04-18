@@ -46,5 +46,34 @@ namespace WpfAutoadatok
                 
             }
         }
+
+        private void buttonKeres_Click(object sender, RoutedEventArgs e)
+        {
+            var kereses = textboxKeres.Text;
+            if (kereses.Length>0)
+            {
+                var eredmeny = autoLista.Autok.FindAll(x => x.Marka.ToLower() == kereses.ToLower());
+                if (eredmeny.Count>0)
+                {
+                    datagridAutoAdatok.ItemsSource = eredmeny;
+                } else
+                {
+                    MessageBox.Show("Nincs találat!");
+                }
+
+            } else
+            {
+                MessageBox.Show("Adja meg a keresett márkát!");
+            }
+            
+        }
+
+        private void textboxKeres_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (textboxKeres.Text.Length<1)
+            {
+                datagridAutoAdatok.ItemsSource = autoLista.Autok;
+            }
+        }
     }
 }
