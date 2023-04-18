@@ -81,8 +81,11 @@
             <ComboBoxItem Content="18"/>
             
         </ComboBox>
-        <TextBox x:Name="textboxPassword" Width="400" Height="35" FontSize="22" IsEnabled="False" Grid.Row="6" Grid.ColumnSpan="2"/>
-        <Button x:Name="buttonGeneralas" FontSize="18" Content="Generálás" Width="100" Height="35" Grid.Row="7" Grid.ColumnSpan="2"/>
+        <WrapPanel Grid.Row="6" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBox x:Name="textboxPassword" Width="400" Height="35" FontSize="22" IsEnabled="False" Grid.Row="6" Grid.ColumnSpan="2"/>
+            <Button x:Name="buttonVagolap" Content="Copy" Margin="10,0,0,0" Click="buttonVagolap_Click" />
+        </WrapPanel>    
+        <Button x:Name="buttonGeneralas" FontSize="18" Content="Generálás" Width="100" Height="35" Grid.Row="7" Grid.ColumnSpan="2" Click="buttonGeneralas_Click"/>
 
     </Grid>
 </Window>
