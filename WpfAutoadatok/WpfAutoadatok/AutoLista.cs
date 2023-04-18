@@ -13,7 +13,7 @@ namespace WpfAutoadatok
         {
             Autok = new List<Auto>();
 
-            var sorok = File.ReadAllLines(fajl, Encoding.UTF8);
+            var sorok = File.ReadAllLines(fajl, Encoding.UTF7);
 
             for (int i = start; i < sorok.Length; i++)
             {
