@@ -1,8 +1,11 @@
 ﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -56,6 +59,7 @@ namespace WpfAutoadatok
                 if (eredmeny.Count>0)
                 {
                     datagridAutoAdatok.ItemsSource = eredmeny;
+                    
                 } else
                 {
                     MessageBox.Show("Nincs találat!");
@@ -74,6 +78,49 @@ namespace WpfAutoadatok
             {
                 datagridAutoAdatok.ItemsSource = autoLista.Autok;
             }
+
+            
+
+        }
+
+        private void buttonKiir_Click(object sender, RoutedEventArgs e)
+        {
+
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "*.csv (csv fájlok)|*.csv";
+
+            if (dialog.ShowDialog()==true)
+            {
+
+                try
+                {
+                    FileStream file = new FileStream(dialog.FileName, FileMode.Create);
+
+                    using (StreamWriter writer = new StreamWriter(file, Encoding.Default))
+                    {
+                        writer.WriteLine($"Id;Marka;Tipus;Evjarat;Uzem;Hengerurtartalom;Teljesitmeny;Futottkm;Ar");
+
+                        foreach (var i in datagridAutoAdatok.Items)
+                        {
+                            Auto auto = i as Auto;
+
+                            writer.WriteLine($"{auto.Id};{auto.Marka};{auto.Tipus};{auto.Evjarat};{auto.Uzem};{auto.Hengerurtartalom};{auto.Teljesitmeny};{auto.FutottKm};{auto.Ar}");
+                            //Írás az output ablakba
+                            //Debug.WriteLine(auto.Marka);
+                        }
+
+                    }
+                    MessageBox.Show("Sikeres mentés!", "Mentés", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+            }
+
+
         }
     }
 }
