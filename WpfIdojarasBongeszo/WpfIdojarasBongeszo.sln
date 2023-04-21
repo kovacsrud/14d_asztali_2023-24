@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfIdojarasBongeszo", "WpfIdojarasBongeszo\WpfIdojarasBongeszo.csproj", "{067097FA-50C2-4ED3-A2A3-2FC871C3FDE8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{067097FA-50C2-4ED3-A2A3-2FC871C3FDE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{067097FA-50C2-4ED3-A2A3-2FC871C3FDE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{067097FA-50C2-4ED3-A2A3-2FC871C3FDE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{067097FA-50C2-4ED3-A2A3-2FC871C3FDE8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BD4085CC-41A6-41D5-96B0-7AED4FC0EDD9}
+	EndGlobalSection
+EndGlobal
