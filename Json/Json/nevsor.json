@@ -1,0 +1,22 @@
+{
+    "nevsor":[
+    {
+      "id": 1,
+      "nev": "Elek"
+    },
+    {
+      "id": 2,
+      "nev": "Ubul",
+      "ismerosok": [
+        { "nev": "Béla" },
+        { "nev": "Gáspár" },
+        { "nev": "Judit" }
+
+      ]
+    },
+    {
+      "id": 3,
+      "nev": "Géza"
+    }
+  ]
+}
