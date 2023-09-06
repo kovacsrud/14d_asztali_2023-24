@@ -33,12 +33,21 @@ namespace WpfJackie
 
         private void buttonBetolt_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog dialog= new OpenFileDialog();
-            if (dialog.ShowDialog()==true)
+            try
             {
-                list = new ListBuild(dialog.FileName, '\t');
-                datagridAdatok.ItemsSource = list.JackieYears;
+                OpenFileDialog dialog = new OpenFileDialog();
+                if (dialog.ShowDialog() == true)
+                {
+                    list = new ListBuild(dialog.FileName, '\t');
+                    datagridAdatok.ItemsSource = list.JackieYears;
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
+            
         }
     }
 }
