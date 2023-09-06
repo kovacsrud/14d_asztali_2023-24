@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackieStewart", "JackieStewart\JackieStewart.csproj", "{A21590FD-720B-46D6-B6F9-F338BCD6CAE6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JackieStewart", "JackieStewart\JackieStewart.csproj", "{A21590FD-720B-46D6-B6F9-F338BCD6CAE6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackieOld", "JackieOld\JackieOld.csproj", "{7B78B7BB-D3C7-4AF3-AF33-462D53016544}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfJackie", "WpfJackie\WpfJackie.csproj", "{44C6C2AF-B07A-416A-989A-14D14A7BDE91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{7B78B7BB-D3C7-4AF3-AF33-462D53016544}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B78B7BB-D3C7-4AF3-AF33-462D53016544}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B78B7BB-D3C7-4AF3-AF33-462D53016544}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44C6C2AF-B07A-416A-989A-14D14A7BDE91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44C6C2AF-B07A-416A-989A-14D14A7BDE91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44C6C2AF-B07A-416A-989A-14D14A7BDE91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44C6C2AF-B07A-416A-989A-14D14A7BDE91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
