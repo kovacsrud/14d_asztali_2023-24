@@ -45,6 +45,8 @@ namespace WpfJackie
                     //datagridAdatok.ItemsSource = list.JackieYears;
                     //datagridAdatok.DataContext = list;
                     DataContext = list;
+                    comboYears.SelectedIndex = 0;
+
                     
                  
                 }
@@ -59,10 +61,18 @@ namespace WpfJackie
 
         private void buttonKeres_Click(object sender, RoutedEventArgs e)
         {
+            EvKeres();
+
+        }
+
+        private void EvKeres()
+        {
             datagridAdatok.ItemsSource = null;
             try
             {
-                var ev = Convert.ToInt32(textboxKeres.Text);
+                //var ev = Convert.ToInt32(textboxKeres.Text);
+                var ev = (int)comboYears.SelectedValue;
+
                 var result = list.JackieYears.FindAll(x => x.Year == ev);
                 if (result.Count > 0)
                 {
@@ -77,13 +87,16 @@ namespace WpfJackie
             {
                 MessageBox.Show(ex.Message);
             }
-            
-
         }
 
         private void buttonVissza_Click(object sender, RoutedEventArgs e)
         {
             datagridAdatok.ItemsSource = list.JackieYears;
+        }
+
+        private void comboYears_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            EvKeres();
         }
     }
 }

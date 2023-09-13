@@ -30,6 +30,8 @@
 
         <WrapPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
             <TextBlock Text="Keresés év szerint:"  VerticalAlignment="Center" Margin="0,0,5,0" />
+            <ComboBox x:Name="comboYears" Margin="5,0,5,0" ItemsSource="{Binding JackieYears}" DisplayMemberPath="Year" SelectedValuePath="Year" SelectionChanged="comboYears_SelectionChanged"/>
+
             <TextBox x:Name="textboxKeres" Width="200" Height="30" VerticalContentAlignment="Center" Margin="0,0,5,0"/>
             <Button Content="Keresés" x:Name="buttonKeres" Click="buttonKeres_Click" />
             <Button Content="Visszaállít" x:Name="buttonVissza" Margin="5,0,0,0" Click="buttonVissza_Click" />
