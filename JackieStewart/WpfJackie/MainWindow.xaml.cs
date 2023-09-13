@@ -23,12 +23,14 @@ namespace WpfJackie
     public partial class MainWindow : Window
     {
         ListBuild list;
-        string fajlNev;
+        
+        
 
         public MainWindow()
         {
             InitializeComponent();
-            fajlNev = "";
+        
+            
         }
 
         private void buttonBetolt_Click(object sender, RoutedEventArgs e)
@@ -39,7 +41,12 @@ namespace WpfJackie
                 if (dialog.ShowDialog() == true)
                 {
                     list = new ListBuild(dialog.FileName, '\t');
-                    datagridAdatok.ItemsSource = list.JackieYears;
+
+                    //datagridAdatok.ItemsSource = list.JackieYears;
+                    //datagridAdatok.DataContext = list;
+                    DataContext = list;
+                    
+                 
                 }
             }
             catch (Exception ex)
@@ -48,6 +55,35 @@ namespace WpfJackie
                 
             }
             
+        }
+
+        private void buttonKeres_Click(object sender, RoutedEventArgs e)
+        {
+            datagridAdatok.ItemsSource = null;
+            try
+            {
+                var ev = Convert.ToInt32(textboxKeres.Text);
+                var result = list.JackieYears.FindAll(x => x.Year == ev);
+                if (result.Count > 0)
+                {
+                    datagridAdatok.ItemsSource = result;
+                }
+                else
+                {
+                    MessageBox.Show("Nincs találat!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+
+        }
+
+        private void buttonVissza_Click(object sender, RoutedEventArgs e)
+        {
+            datagridAdatok.ItemsSource = list.JackieYears;
         }
     }
 }

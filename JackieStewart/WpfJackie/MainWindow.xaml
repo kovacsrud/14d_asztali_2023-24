@@ -10,11 +10,36 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="4*"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="datagridAdatok" ColumnWidth="*"/>
+        <DataGrid x:Name="datagridAdatok" ItemsSource="{Binding JackieYears}" ColumnWidth="*" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Év" Binding="{Binding Year}"/>
+                <DataGridTextColumn Header="Versenyek száma" Binding="{Binding Races}"/>
+                <DataGridTextColumn Header="Győzelmek száma" Binding="{Binding Wins}" />
+                <DataGridTextColumn Header="Pódiumok száma" Binding="{Binding Podiums}" />
+                <DataGridTextColumn Header="Pole pozíciók" Binding="{Binding Poles}" />
+                <DataGridTextColumn Header="Leggyorsabb körök" Binding="{Binding Fastests}" />
 
-        <Button x:Name="buttonBetolt" Content="Betöltés" Grid.Row="1" Width="200" Height="50" Click="buttonBetolt_Click"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+
+
+        <WrapPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Keresés év szerint:"  VerticalAlignment="Center" Margin="0,0,5,0" />
+            <TextBox x:Name="textboxKeres" Width="200" Height="30" VerticalContentAlignment="Center" Margin="0,0,5,0"/>
+            <Button Content="Keresés" x:Name="buttonKeres" Click="buttonKeres_Click" />
+            <Button Content="Visszaállít" x:Name="buttonVissza" Margin="5,0,0,0" Click="buttonVissza_Click" />
+
+
+        </WrapPanel>
+
+
+
+        <Button x:Name="buttonBetolt" Content="Betöltés" Grid.Row="2" Width="200" Height="50" Click="buttonBetolt_Click"/>
 
 
     </Grid>
