@@ -65,6 +65,18 @@ namespace WpfJackie
 
         }
 
+       
+
+        private void buttonVissza_Click(object sender, RoutedEventArgs e)
+        {
+            datagridAdatok.ItemsSource = list.JackieYears;
+        }
+
+        private void comboYears_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            EvKeres();
+        }
+
         private void EvKeres()
         {
             datagridAdatok.ItemsSource = null;
@@ -87,16 +99,6 @@ namespace WpfJackie
             {
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void buttonVissza_Click(object sender, RoutedEventArgs e)
-        {
-            datagridAdatok.ItemsSource = list.JackieYears;
-        }
-
-        private void comboYears_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            EvKeres();
         }
     }
 }
