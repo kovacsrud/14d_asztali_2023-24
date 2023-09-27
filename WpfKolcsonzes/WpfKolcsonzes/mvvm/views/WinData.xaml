@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfKolcsonzes.mvvm.views.WinData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfKolcsonzes.mvvm.views"
+        mc:Ignorable="d"
+        Title="Adatok kezelése" Height="450" Width="800">
+    <Grid>
+        <DataGrid ItemsSource="{Binding Kolcsonzesek}" AutoGenerateColumns="False" ColumnWidth="*">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="A kölcsönző neve" Binding="{Binding Nev}"/>
+                <DataGridTextColumn Header="Jármű azonosító" Binding="{Binding Jazon}"/>
+                <DataGridTextColumn Header="Kölcsönzés kezdete(óra)" Binding="{Binding Eora}"/>
+                <DataGridTextColumn Header="Kölcsönzés kezdete(perc)" Binding="{Binding Eperc}"/>
+                <DataGridTextColumn Header="Kölcsönzés vége(óra)" Binding="{Binding Vora}"/>
+                <DataGridTextColumn Header="Kölcsönzés vége(perc)" Binding="{Binding Vperc}"/>
+            </DataGrid.Columns>
+            
+        </DataGrid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfKolcsonzes.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfKolcsonzes"
+        mc:Ignorable="d"
+        Title="Kölcsönzések" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="Fájl">
+                <MenuItem Header="Megnyitás"/>
+                <MenuItem Header="Mentés"/>
+                <Separator/>
+                <MenuItem Header="Kilépés"/>
+            </MenuItem>
+            <MenuItem Header="Szerkesztés">
+                <MenuItem Header="Kivágás"/>
+                <MenuItem Header="Másolás"/>
+                <Separator/>
+                <MenuItem Header="Beillesztés"/>
+            </MenuItem>
+            <MenuItem Header="Adatkezelés">
+                <MenuItem Header="Kölcsönzések adatai" Command="{Binding WinDataCommand}"/>
+            </MenuItem>
+            <MenuItem Header="Súgó">
+                <MenuItem Header="Nevjegy" Command="{Binding NevjegyCommand}"/>
+            </MenuItem>
+        </Menu>
+
+    </Grid>
+</Window>
