@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Atlagfogyasztas.Fogyasztas"
+             Title="Fogyasztas">
+
+    <Grid ColumnDefinitions=".4*,.6*" RowDefinitions="1*,1*,1*,1*,1*,1*">
+        <Label Text="Átlagfogyasztás számítás" VerticalOptions="Center" HorizontalOptions="Center" TextColor="{StaticResource Blue200Accent}" FontAttributes="Bold" FontSize="Title" Grid.ColumnSpan="2" />
+        <Label Text="Megtett km:" VerticalOptions="Center" HorizontalOptions="End" FontSize="Subtitle" FontAttributes="Bold" TextColor="{StaticResource Blue200Accent}" Grid.Row="1"/>
+        <Entry x:Name="entryMegtettKm" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" FontSize="Subtitle" Grid.Row="1" Grid.Column="1" />
+        <Label Text="Tankolt liter:" VerticalOptions="Center" HorizontalOptions="End" FontSize="Subtitle" FontAttributes="Bold" TextColor="{StaticResource Blue200Accent}" Grid.Row="2"/>
+        <Entry x:Name="entryTankoltLiter" HeightRequest="50" WidthRequest="200" HorizontalOptions="Start" FontSize="Subtitle" Grid.Row="2" Grid.Column="1" />
+        <Label Text="Átlagfogyasztás:" HorizontalOptions="Center" FontSize="Title" FontAttributes="Bold" TextColor="{StaticResource Blue100Accent}" Grid.Row="3" Grid.ColumnSpan="2"/>
+        <Label x:Name="labelAtlagfogyasztas" Text="" Margin="20" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Large" FontAttributes="Bold" TextColor="{StaticResource Blue200Accent}" Grid.Row="4" Grid.ColumnSpan="2"/>
+        <Button Text="Számolás" HeightRequest="40" WidthRequest="200"  Grid.Row="5" Grid.ColumnSpan="2" Clicked="Button_Clicked"/>
+
+
+
+
+
+
+    </Grid>
+    
+    
+</ContentPage>
