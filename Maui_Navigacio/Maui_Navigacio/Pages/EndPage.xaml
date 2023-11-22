@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Maui_Navigacio.Pages.EndPage"
+             Title="EndPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="EndPage"
+            FontSize="Header"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Button Text="Page2"  Clicked="Button_Clicked"/>
+        <Button Text="StartPage" Clicked="Button_Clicked_1"/>
+    </VerticalStackLayout>
+</ContentPage>
