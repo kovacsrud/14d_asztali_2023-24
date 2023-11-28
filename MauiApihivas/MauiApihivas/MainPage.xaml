@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApihivas.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+           
+
+            <Label
+                Text="REST API használat"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+            <CollectionView x:Name="collectionPosts">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <VerticalStackLayout>
+                            <Label FontSize="24" Text="{Binding title}"/>
+                            <Label FontSize="16" Text="{Binding body}" />
+                        </VerticalStackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <Button x:Name="buttonAllPost" Text="Posztok letöltése" Clicked="buttonAllPost_Clicked" />
+            <Button x:Name="buttonOnePost" Text="Egy poszt letöltése" Clicked="buttonOnePost_Clicked" />
+            <Button x:Name="buttonNewPost" Text="Új poszt küldése" Clicked="buttonNewPost_Clicked" />
+            <Button x:Name="buttonPatchPost" Text="Poszt módosítása" Clicked="buttonPatchPost_Clicked" />
+            <Button x:Name="buttonDeletePost" Text="Poszt törlése" Clicked="buttonDeletePost_Clicked" /> 
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
