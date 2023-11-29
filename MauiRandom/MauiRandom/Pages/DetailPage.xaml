@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiRandom.Pages.DetailPage"
+             Title="DetailPage" BackgroundColor="{StaticResource RuHatter}">
+    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
+        <Label 
+            Text="{Binding email}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Image Source="{Binding picture.large}"/>
+    </VerticalStackLayout>
+</ContentPage>
