@@ -3,9 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiRandom.Pages.ListPage"
              Title="ListPage" BackgroundColor="{StaticResource RuHatter}">
-    <ScrollView>
-    <VerticalStackLayout VerticalOptions="Center">
-            <Border VerticalOptions="Center" HeightRequest="600"  Margin="5" Stroke="{StaticResource RuStroke}" StrokeShape="RoundRectangle 0,40,40,0">
+    
+            <Border VerticalOptions="FillAndExpand"  Margin="10" Stroke="{StaticResource RuStroke}" BackgroundColor="{StaticResource RuHatter}" StrokeThickness="2" StrokeShape="RoundRectangle 0,40,40,0">
                 <Grid RowDefinitions=".2*,.7*,.1*">
                    <Label 
                         Text="A felhasználók adatai:"
@@ -53,6 +52,6 @@
 
                 </Grid>
             </Border>
-        </VerticalStackLayout>
-    </ScrollView>
+    
+    
 </ContentPage>

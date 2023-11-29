@@ -3,11 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiRandom.Pages.DetailPage"
              Title="DetailPage" BackgroundColor="{StaticResource RuHatter}">
-    <VerticalStackLayout VerticalOptions="Center" HorizontalOptions="Center">
-        <Label 
-            Text="{Binding email}"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Image Source="{Binding picture.large}"/>
-    </VerticalStackLayout>
+    <ScrollView>
+        <Border VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="10" BackgroundColor="{StaticResource RuHatter}" Stroke="{StaticResource RuStroke}" StrokeShape="RoundRectangle 0,40,40,0">
+           
+
+                <Grid ColumnDefinitions="*" RowDefinitions=".4*,.1*,.1*,.1*,.1*,.1*,.1*,.1*" Margin="10" Padding="10">
+                    <Border StrokeShape="RoundRectangle 20,20,20,20" WidthRequest="200" HeightRequest="200">
+                        <Image Source="{Binding picture.large}" WidthRequest="200" HeightRequest="200" Grid.ColumnSpan="3"/>
+                    </Border>
+                <HorizontalStackLayout Grid.Row="1">
+                    <Label Text="Name:" FontSize="18" FontFamily="Nexaheavy" Margin="0,0,5,0" TextColor="White" Grid.Row="1" />
+                    <Label Text="{Binding name.title}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                    <Label Text="{Binding name.first}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                    <Label Text="{Binding name.last}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                    </HorizontalStackLayout>
+                    
+                    <HorizontalStackLayout Grid.Row="2">
+                        <Label Text="Email:" FontSize="18" FontFamily="Nexaheavy" Margin="0,0,5,0" TextColor="White" Grid.Row="1" />
+                        <Label Text="{Binding email}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                    </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Row="3">
+                    <Label Text="Phone:" FontSize="18" FontFamily="Nexaheavy" Margin="0,0,5,0" TextColor="White" Grid.Row="1" />
+                    <Label Text="{Binding phone}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Row="4">
+                    <Label Text="Date of birth:" FontSize="18" FontFamily="Nexaheavy" Margin="0,0,5,0" TextColor="White" Grid.Row="1" />
+                    <Label Text="{Binding dob.date}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Row="5">
+                    <Label Text="Login name:" FontSize="18" FontFamily="Nexaheavy" Margin="0,0,5,0" TextColor="White" Grid.Row="1" />
+                    <Label Text="{Binding login.username}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Row="6">
+                    <Label Text="City:" FontSize="18" FontFamily="Nexaheavy" Margin="0,0,5,0" TextColor="White" Grid.Row="1" />
+                    <Label Text="{Binding location.city}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                </HorizontalStackLayout>
+                <HorizontalStackLayout Grid.Row="7">
+                    <Label Text="Address:" FontSize="18" FontFamily="Nexaheavy" Margin="0,0,5,0" TextColor="White" Grid.Row="1" />
+                    <Label Text="{Binding location.street.name}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                    <Label Text="{Binding location.street.number}" FontSize="18" FontFamily="Nexalight" Margin="0,0,5,0" TextColor="White" />
+                </HorizontalStackLayout>
+
+
+
+
+            </Grid>
+
+
+           
+        </Border>
+    </ScrollView>
 </ContentPage>
