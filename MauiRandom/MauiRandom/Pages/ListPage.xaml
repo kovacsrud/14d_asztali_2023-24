@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiRandom.Pages.ListPage"
-             Title="ListPage" BackgroundColor="{StaticResource RuHatter}">
-    
-            <Border VerticalOptions="FillAndExpand"  Margin="10" Stroke="{StaticResource RuStroke}" BackgroundColor="{StaticResource RuHatter}" StrokeThickness="2" StrokeShape="RoundRectangle 0,40,40,0">
+             Title="ListPage" BackgroundColor="{StaticResource RuHatter}" NavigationPage.HasNavigationBar="False">
+
+    <Border VerticalOptions="FillAndExpand"  Margin="10" Stroke="{StaticResource RuStroke}" BackgroundColor="{StaticResource RuHatter}" StrokeThickness="2" StrokeShape="RoundRectangle 0,40,40,0" >
                 <Grid RowDefinitions=".2*,.7*,.1*">
                    <Label 
                         Text="A felhasználók adatai:"
