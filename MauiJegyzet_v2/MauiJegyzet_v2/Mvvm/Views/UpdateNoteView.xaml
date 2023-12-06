@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiJegyzet_v2.Mvvm.Views.UpdateNoteView"
+             Title="UpdateNoteView">
+    <VerticalStackLayout>
+        <Label Text="Jegyzet Módosítása" FontSize="26" FontAttributes="Bold" HorizontalOptions="Center"/>
+        <Entry Placeholder="Cím" Text="{Binding CurrentNote.Title}" />
+        <Entry Placeholder="Jegyzet szövege" Text="{Binding CurrentNote.NoteText}" />
+        <Button Text="Rögzít" Command="{Binding UpdateCommand}" />
+    </VerticalStackLayout>
+</ContentPage>

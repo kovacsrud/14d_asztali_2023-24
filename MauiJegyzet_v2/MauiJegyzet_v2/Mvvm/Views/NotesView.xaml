@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiJegyzet_v2.Mvvm.Views.NotesView"
+             Title="NotesView">
+    <Grid RowDefinitions=".2*,.6*,.2*">
+        <Label 
+            Text="Jegyzetek"
+            FontSize="26"
+            FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <CollectionView ItemsSource="{Binding Notes}" SelectionMode="Single" SelectedItem="{Binding CurrentNote}" EmptyView="Nincsenek jegyzetek" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Border BackgroundColor="LightBlue" StrokeShape="RoundRectangle 5,5,5,5" Margin="5" Padding="5">
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="18"/>
+                            <Label Text="{Binding NoteText}" />
+                            <Label Text="{Binding Date}" />
+
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <HorizontalStackLayout Grid.Row="2">
+        <Border BackgroundColor="Black" StrokeShape="RoundRectangle 80,80,80,80" HorizontalOptions="End" VerticalOptions="End" >
+            <Button Text="+" FontSize="24" FontAttributes="Bold" BackgroundColor="Black"  Clicked="Button_Clicked"/>
+        </Border>
+            <Button Text="Módosítás"   BackgroundColor="Black" Clicked="Button_Clicked_1"/>
+        </HorizontalStackLayout>
+
+
+
+
+
+    </Grid>
+</ContentPage>
