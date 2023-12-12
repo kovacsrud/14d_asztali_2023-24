@@ -19,7 +19,9 @@ public partial class NewNoteView : ContentPage
     {
         var result = await DisplayAlert("Új jegyzet","Biztosan rögzíti?","Igen","Nem");
         if (result) {
-            App.NotesRepo.NewNote(NewNote);
+            NewNote.CategoryId=ViewModel.CurrentCategory.Id;
+            NewNote.Category = ViewModel.CurrentCategory;
+            App.NotesRepo.NewItem(NewNote);
             await DisplayAlert("Státusz", App.NotesRepo.StatusMsg, "Ok");
             ViewModel.GetNotes();
         }

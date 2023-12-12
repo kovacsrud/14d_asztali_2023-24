@@ -25,10 +25,12 @@
             </CollectionView.ItemTemplate>
         </CollectionView>
         <HorizontalStackLayout Grid.Row="2">
-        <Border BackgroundColor="Black" StrokeShape="RoundRectangle 80,80,80,80" HorizontalOptions="End" VerticalOptions="End" >
+            <Button Text="Törlés" HeightRequest="30" VerticalOptions="End"  BackgroundColor="Black" Command="{Binding DeleteCommand}"/>
+            <Button Text="Módosítás" HeightRequest="30" VerticalOptions="End"  BackgroundColor="Black" Clicked="Button_Clicked_1"/>
+            <Border BackgroundColor="Black" StrokeShape="RoundRectangle 80,80,80,80" HorizontalOptions="End" VerticalOptions="End" >
             <Button Text="+" FontSize="24" FontAttributes="Bold" BackgroundColor="Black"  Clicked="Button_Clicked"/>
         </Border>
-            <Button Text="Módosítás"   BackgroundColor="Black" Clicked="Button_Clicked_1"/>
+          
         </HorizontalStackLayout>
 
 
