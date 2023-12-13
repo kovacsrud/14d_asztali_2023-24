@@ -30,6 +30,11 @@ namespace MauiJegyzet_v2.Mvvm.ViewModels
             //var categories = App.CategoryRepo.GetItems();
 
             GetNotes();
+            if (Categories.Count<1)
+            {
+                App.CategoryRepo.NewItem(new Category { CategoryName = "alapértelmezett" });
+                GetNotes();
+            }
             UpdateCommand = new Command(async () => {
                 var result = await Application.Current.MainPage.DisplayAlert("Jegyzet módosítása","Biztosan módosítja?","Igen","Nem");
                 if (result)

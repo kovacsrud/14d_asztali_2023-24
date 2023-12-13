@@ -2,7 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiJegyzet_v2.Mvvm.Views.NotesView"
-             Title="NotesView">
+             Title="">
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="Kategóriák">
+            <MenuFlyoutItem Text="Kategóriák listája"/>
+            <MenuFlyoutItem Text="Új kategória"/>
+        </MenuBarItem>
+
+
+    </ContentPage.MenuBarItems>
     <Grid RowDefinitions=".2*,.6*,.2*">
         <Label 
             Text="Jegyzetek"

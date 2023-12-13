@@ -13,6 +13,7 @@ public partial class NewNoteView : ContentPage
 		InitializeComponent();
         ViewModel = vm;
         BindingContext = this;
+        pickerCategories.SelectedIndex = 0;
 	}
 
     private async void Button_Clicked(object sender, EventArgs e)
@@ -24,6 +25,7 @@ public partial class NewNoteView : ContentPage
             App.NotesRepo.NewItem(NewNote);
             await DisplayAlert("Státusz", App.NotesRepo.StatusMsg, "Ok");
             ViewModel.GetNotes();
+            pickerCategories.SelectedIndex = 0;
         }
     }
 }
