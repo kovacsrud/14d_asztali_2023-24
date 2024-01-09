@@ -5,7 +5,7 @@
 - SqliteNetExtensions
 - PropertyChanged.Fody
 
-## Adatbázis config létrehozása (DbConfig.cs)
+### Adatbázis config létrehozása (DbConfig.cs)
 
 ```c#
  public static class DbConfing
@@ -23,3 +23,10 @@
      }
  }
 ```
+### A szükséges mappák létrehozása
+MVVM (benne pedig a Models,Views,ViewModels mappák)
+Interfaces (a repository inteface, valamint az alap modell osztály)
+Repository (az adatbázis repónak)
+
+
+
