@@ -126,12 +126,30 @@ A repository létrehozása az interfész alapján (BaseRepository.cs)
     }
 }
 ```
-### Modell osztály létrehozása
+Modell osztály létrehozása
 
 ```C#
 public class Modell:TableData
 {
     public int PropA { get; set; }
     public string PropB { get; set; }
+}
+```
+A repository beállítása a MauiProgram.cs-ben
+```c#
+builder.Services.AddSingleton<BaseRepository<Modell>>();
+```
+Beállítás Az App.xaml.cs-ben:
+```c#
+public partial class App : Application
+{
+    public static BaseRepository<Modell> ModellRepo {  get; set; }
+    public App(BaseRepository<Modell> modellrepo)
+    {
+        InitializeComponent();
+        ModellRepo = modellrepo;
+
+        MainPage = new AppShell();
+    }
 }
 ```
