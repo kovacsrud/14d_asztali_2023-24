@@ -24,9 +24,9 @@
  }
 ```
 ### A szükséges mappák létrehozása
-MVVM (benne pedig a Models,Views,ViewModels mappák)
-Interfaces (a repository inteface, valamint az alap modell osztály)
-Repository (az adatbázis repónak)
+ - MVVM (benne pedig a Models,Views,ViewModels mappák)
+ - Interfaces (a repository inteface, valamint az alap modell osztály)
+ - Repository (az adatbázis repónak)
 
 
 
