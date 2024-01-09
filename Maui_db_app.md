@@ -13,7 +13,7 @@
      //Át kell írni az aktuális adatbázis fájlnévre
      private const string dbname = "dbalap.db";
 
-     public const SQLiteOpenFlags Flags = SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create |         SQLiteOpenFlags.SharedCache;
+     public const SQLiteOpenFlags Flags = SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create|SQLiteOpenFlags.SharedCache;
 
      public static string DatabasePath {
          get
