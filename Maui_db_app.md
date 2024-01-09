@@ -39,4 +39,14 @@ public class TableData
     public int Id { get; set; }
 }
 ```
+Az repository interfész létrehozása
 
+```C#
+public interface IBaseRepository<T>:IDisposable where T : TableData, new()
+{
+    void NewItem(T item);
+    void UpdateItem(T item);
+    void DeleteItem(T item);
+    List<T> GetItems();
+}
+```
