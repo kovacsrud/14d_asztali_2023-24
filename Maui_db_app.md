@@ -28,5 +28,15 @@
  - Interfaces (a repository inteface, valamint az alap modell osztály)
  - Repository (az adatbázis repónak)
 
+### Interfész valamint az alap modell osztály létrehozása
 
+A modellek alaposztálya a TableData.cs
+
+```C#
+public class TableData
+{
+    [PrimaryKey,AutoIncrement]
+    public int Id { get; set; }
+}
+```
 
