@@ -126,3 +126,12 @@ A repository létrehozása az interfész alapján (BaseRepository.cs)
     }
 }
 ```
+### Modell osztály létrehozása
+
+```C#
+public class Modell:TableData
+{
+    public int PropA { get; set; }
+    public string PropB { get; set; }
+}
+```
