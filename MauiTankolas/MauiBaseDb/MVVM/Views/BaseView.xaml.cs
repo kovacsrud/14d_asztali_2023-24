@@ -9,4 +9,9 @@ public partial class BaseView : ContentPage
 		InitializeComponent();
 		BindingContext = new BaseViewModel();
 	}
+
+    private async void buttonUj_Clicked(object sender, EventArgs e)
+    {
+		await Navigation.PushAsync(new UjTankolasView());
+    }
 }

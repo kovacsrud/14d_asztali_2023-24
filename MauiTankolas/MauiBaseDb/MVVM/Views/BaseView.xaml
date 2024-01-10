@@ -6,6 +6,6 @@
     <VerticalStackLayout VerticalOptions="Center" >
         <Image Source="car_wash.png" Margin="0,0,0,20" WidthRequest="200"/>
         <Button Text="Tankolás adatok" Margin="10,0,10,0" StyleClass="AlapButton" />
-        <Button Text="Új tankolás" Margin="10,0,10,0" StyleClass="AlapButton" />
+        <Button x:Name="buttonUj" Text="Új tankolás" Margin="10,0,10,0" StyleClass="AlapButton" Clicked="buttonUj_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
