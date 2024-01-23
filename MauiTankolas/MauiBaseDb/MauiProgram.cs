@@ -1,6 +1,7 @@
 ﻿using MauiBaseDb.MVVM.Models;
 using MauiBaseDb.repository;
 using Microsoft.Extensions.Logging;
+using SkiaSharp.Views.Maui.Controls.Hosting;
 
 namespace MauiBaseDb
 {
@@ -11,6 +12,7 @@ namespace MauiBaseDb
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                .UseSkiaSharp(true)
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");

@@ -7,17 +7,17 @@
     <Grid ColumnDefinitions=".6*,.4*" RowDefinitions=".2*,.2*,.2*,.3*,.1*">
         
             <Label Text="Tankolt mennyiség(l):" TextColor="{StaticResource Vilagos_1}" VerticalOptions="Center" HorizontalOptions="Center"/>
-            <Entry Placeholder="Tankolt mennyiség" TextColor="{StaticResource Vilagos_1}" Text="{Binding Ujtankolas.TankoltLiter}" Keyboard="Numeric" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" />
+            <Entry Placeholder="Tankolt mennyiség" TextColor="{StaticResource Vilagos_1}" Text="{Binding UjTankolas.TankoltLiter}" Keyboard="Numeric" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" />
         
         
         
             <Label Text="Km óra állása:" TextColor="{StaticResource Vilagos_1}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1"/>
-        <Entry Placeholder="Óraállás" TextColor="{StaticResource Vilagos_1}" Text="{Binding Ujtankolas.OraAllas}" Keyboard="Numeric" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Entry Placeholder="Óraállás" TextColor="{StaticResource Vilagos_1}" Text="{Binding UjTankolas.OraAllas}" Keyboard="Numeric" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center"/>
         
         
         
         <Label Text="Dátum:" TextColor="{StaticResource Vilagos_1}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2"/>
-        <DatePicker Date="{Binding Ujtankolas.Datum}"  Grid.Row="2" TextColor="{StaticResource Vilagos_1}"  Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <DatePicker Date="{Binding UjTankolas.Datum}"  Grid.Row="2" TextColor="{StaticResource Vilagos_1}"  Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"/>
         
         
         <Button x:Name="buttonUj" Text="Rögzítés" Margin="10" StyleClass="AlapButton"  Grid.Row="4" Grid.ColumnSpan="2" Clicked="buttonUj_Clicked"/>

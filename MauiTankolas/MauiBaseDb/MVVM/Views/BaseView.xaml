@@ -5,7 +5,8 @@
              Title="Tankolás App" BackgroundColor="{StaticResource Sotet_1}">
     <VerticalStackLayout VerticalOptions="Center" >
         <Image Source="car_wash.png" Margin="0,0,0,20" WidthRequest="200"/>
-        <Button Text="Tankolás adatok" Margin="10,0,10,0" StyleClass="AlapButton" />
+        <Button x:Name="buttonAdatok" Text="Tankolás adatok" Margin="10,0,10,0" StyleClass="AlapButton" Clicked="buttonAdatok_Clicked"/>
         <Button x:Name="buttonUj" Text="Új tankolás" Margin="10,0,10,0" StyleClass="AlapButton" Clicked="buttonUj_Clicked"/>
+        <Button x:Name="buttonDiagram" Text="Diagramok" Margin="10,0,10,0" StyleClass="AlapButton" Clicked="buttonDiagram_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>

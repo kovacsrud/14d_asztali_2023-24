@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBaseDb.MVVM.Views.TankolasAdatView"
+             Title="Tankolások adatai">
+    <Grid RowDefinitions=".7*,.1*,.1*,.1*">
+
+        <CollectionView ItemsSource="{Binding Tankolasok}" SelectionMode="Single" SelectedItem="{Binding AktualisTankolas}" EmptyView="Az adatbázis üres!">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                 
+                    <Border BackgroundColor="{StaticResource Sotet_2}" StrokeShape="RoundRectangle 5,5,5,5" Margin="5">
+                        
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualState Name="Normal"></VisualState>
+                                <VisualState Name="Selected">
+                                    <VisualState.Setters>
+                                        <Setter Property="BackgroundColor" Value="{StaticResource Sotet_1}"/>
+                                    </VisualState.Setters>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        
+                        <Grid ColumnDefinitions="*,*,*">
+                            <Label Text="{Binding TankoltLiter}" TextColor="{StaticResource Vilagos_1}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <Label Text="{Binding OraAllas}" Grid.Column="1" TextColor="{StaticResource Vilagos_1}" HorizontalOptions="Center" VerticalOptions="Center"/>
+                            <DatePicker Date="{Binding Datum}" Grid.Column="2" TextColor="{StaticResource Vilagos_1}" HorizontalOptions="Center"/>
+                        </Grid>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+        <Button Grid.Row="1" x:Name="buttonUj" Text="Új tankolás" Margin="10,0,10,0" StyleClass="AlapButton" Clicked="buttonUj_Clicked"/>
+        <Button Grid.Row="2" x:Name="buttonModosit" Text="Kijelölt módosítása" Margin="10,0,10,0" StyleClass="AlapButton" Clicked="buttonModosit_Clicked"/>
+        <Button Grid.Row="3" x:Name="buttonTorol" Text="Kijelölt törlése" Margin="10,0,10,10" StyleClass="AlapButton" Command="{Binding DeleteCommand}" />
+    </Grid>
+</ContentPage>

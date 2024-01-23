@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiBaseDb.MVVM.Views.ModositTankolasView"
+             Title="Tankolási adat módosítása" BackgroundColor="{StaticResource Sotet_1}">
+    <Grid ColumnDefinitions=".6*,.4*" RowDefinitions=".2*,.2*,.2*,.3*,.1*">
+
+        <Label Text="Tankolt mennyiség(l):" TextColor="{StaticResource Vilagos_1}" VerticalOptions="Center" HorizontalOptions="Center"/>
+        <Entry Placeholder="Tankolt mennyiség" TextColor="{StaticResource Vilagos_1}" Text="{Binding AktualisTankolas.TankoltLiter}" Keyboard="Numeric" Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" />
+
+
+
+        <Label Text="Km óra állása:" TextColor="{StaticResource Vilagos_1}" VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1"/>
+        <Entry Placeholder="Óraállás" TextColor="{StaticResource Vilagos_1}" Text="{Binding AktualisTankolas.OraAllas}" Keyboard="Numeric" Grid.Column="1" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+
+
+        <Label Text="Dátum:" TextColor="{StaticResource Vilagos_1}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="2"/>
+        <DatePicker Date="{Binding AktualisTankolas.Datum}"  Grid.Row="2" TextColor="{StaticResource Vilagos_1}"  Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center"/>
+
+
+        <Button x:Name="buttonModosit" Text="Rögzítés" Margin="10" StyleClass="AlapButton"  Grid.Row="4" Grid.ColumnSpan="2" Command="{Binding UpdateCommand}"/>
+
+    </Grid>
+</ContentPage>
