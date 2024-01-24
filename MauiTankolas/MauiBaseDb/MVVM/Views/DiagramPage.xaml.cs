@@ -41,6 +41,14 @@ public partial class DiagramPage : ContentPage
 
 		TankoltLiterSeries = new ISeries[]
 		{
+			new LineSeries<int>
+			{
+                Name="Tankolt liter",
+                Values=tankolasok,
+                Fill=new SolidColorPaint(new SKColor(255,255,255,1)),
+				Stroke=new SolidColorPaint(new SKColor(150,150,150)){StrokeThickness=5},
+				
+            },
 			new ColumnSeries<int>
 			{
 				Name="Tankolt liter",
