@@ -24,6 +24,7 @@ public partial class BaseView : ContentPage
 
     private async void buttonDiagram_Clicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new DiagramPage());
+        var vm = (BaseViewModel)BindingContext;
+        await Navigation.PushAsync(new DiagramPage(vm));
     }
 }

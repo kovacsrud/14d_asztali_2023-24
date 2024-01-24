@@ -4,12 +4,13 @@
              xmlns:skia="clr-namespace:LiveChartsCore.SkiaSharpView.Maui;assembly=LiveChartsCore.SkiaSharpView.Maui"
              x:Class="MauiBaseDb.MVVM.Views.DiagramPage"
              Title="Diagramok">
-    <VerticalStackLayout>
+    <Grid RowDefinitions=".1*,.9*">
         <Label 
-            Text="Diagram!"
+            Text="Tankolt mennyiségek"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-        <skia:CartesianChart />
+        
+        <skia:CartesianChart Grid.Row="1"  Series="{Binding TankoltLiterSeries}" XAxes="{Binding XAxes}" YAxes="{Binding YAxes}" LegendPosition="Bottom" LegendTextSize="11"/>
 
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>
