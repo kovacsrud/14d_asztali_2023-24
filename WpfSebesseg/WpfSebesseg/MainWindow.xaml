@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfSebesseg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSebesseg"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="textboxKmh" Width="300" Height="30" FontSize="20" />
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <RadioButton x:Name="radioMs" Content="átszámítás m/s-ra" FontSize="20" VerticalContentAlignment="Center" IsChecked="True"/>
+            <RadioButton x:Name="radioMph" Content="átszámítás mérföldre" FontSize="20" VerticalContentAlignment="Center"/>
+
+        </StackPanel>
+        <TextBlock Grid.Row="2"  x:Name="textblockEredmeny" FontSize="40" Width="300" Height="60" TextAlignment="Center"/>
+
+        <Button Grid.Row="3" x:Name="buttonSzamol" Content="Számolás" FontSize="30" Width="200" Height="40" Click="buttomSzamol_Click"/>
+
+    </Grid>
+</Window>
