@@ -40,7 +40,9 @@ namespace TestSebesseg
             //
             extReport.AddSystemInfo("Sebesség átváltás teszt","Automatizált teszt");
             extReport.AddSystemInfo("Tesztelõ:", "XY");
-            var reporter = new ExtentSparkReporter(@"D:\rud\kodtarak\13d_asztali_2023\WpfSebesseg\WpfSebesseg\bin\Debug\net7.0-windows\result.html");
+            ExtentSparkReporter reporter = new ExtentSparkReporter(@"D:\rud\kodtarak\13d_asztali_2023\WpfSebesseg\WpfSebesseg\bin\Debug\net7.0-windows\result.html");
+            //var reporter = new ExtentSparkReporter("spark_result.html");
+            extReport.AttachReporter(reporter);
             reporter.Config.DocumentTitle = "Sebesség konvertálás teszt riport";
             reporter.Config.ReportName = "Sebesség konvertálás";
             reporter.Config.Theme = AventStack.ExtentReports.Reporter.Config.Theme.Standard;
@@ -51,7 +53,9 @@ namespace TestSebesseg
 
         [Test]
         [TestCase(3.6,1)]
-        [TestCase(7.2, 2)]
+        [TestCase(7.2, 22)]
+        [TestCase(8.2, 33)]
+        [TestCase(11, 50)]
         public void KmhToMs(double kmh,double elvart)
         {
             extTest = extReport.CreateTest("Kmh átszámítása m/s-ra teszt");
@@ -76,20 +80,27 @@ namespace TestSebesseg
             if (status==TestStatus.Failed)
             {
                 ITakesScreenshot shot = (ITakesScreenshot)driver;
+
+                var be = TestContext.CurrentContext.Test.Arguments.GetValue(0);
+                var elvart= TestContext.CurrentContext.Test.Arguments.GetValue(1);
+                var filename = $"result_{be}_{elvart}.png";
+
                 Screenshot screenshot=shot.GetScreenshot();
-                screenshot.SaveAsFile(WPFProgramPath+"error.png",ScreenshotImageFormat.Png);
+                screenshot.SaveAsFile(WPFProgramPath+filename,ScreenshotImageFormat.Png);
                 extTest.Log(Status.Fail, stacktrace + errormsg);
                 extTest.Log(Status.Fail, "Képernyõ:");
-                extTest.AddScreenCaptureFromPath("error.png");
+                extTest.AddScreenCaptureFromPath(filename);
 
             }
 
-
+            extReport.Flush();
+           
         }
 
         [OneTimeTearDown]
         public void Endtest()
         {
+            
             driver.Close();
             driver.Quit();
         }
