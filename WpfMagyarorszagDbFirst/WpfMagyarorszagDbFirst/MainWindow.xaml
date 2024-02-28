@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfMagyarorszagDbFirst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMagyarorszagDbFirst"
+        mc:Ignorable="d"
+        Title="Magyarország települései" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Menu>
+            <MenuItem Header="Fájl">
+                <MenuItem Header="Megnyitás"/>
+                <MenuItem Header="Mentés"/>
+                <Separator/>
+                <MenuItem Header="Kilépés"/>
+            </MenuItem>
+            <MenuItem Header="Szerkesztés">
+                <MenuItem Header="Kivágás"/>
+                <MenuItem Header="Másolás"/>
+                <Separator/>
+                <MenuItem Header="Beillesztés"/>
+            </MenuItem>
+            <MenuItem Header="Települések">
+                <MenuItem x:Name="menuitemTelepulesek" Header="Települések adatai" Click="menuitemTelepulesek_Click"/>
+                <MenuItem x:Name="menuitemMegyek" Header="Megyék adatai" Click="menuitemMegyek_Click"/>
+                <MenuItem x:Name="menuitemJogallasok" Header="Jogállások adatai" Click="menuitemJogallasok_Click"/>
+            </MenuItem>
+            <MenuItem Header="Súgó"/>
+        </Menu>
+        <TextBlock Text="Magyarország települései" Grid.Row="1" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" />
+
+
+    </Grid>
+</Window>
