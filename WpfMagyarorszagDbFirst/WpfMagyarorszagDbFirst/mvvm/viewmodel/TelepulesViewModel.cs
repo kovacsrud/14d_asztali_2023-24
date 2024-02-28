@@ -19,6 +19,8 @@ namespace WpfMagyarorszagDbFirst.mvvm.viewmodel
         public ObservableCollection<Megyek> Megyek { get; set; }
         public ObservableCollection<Telepulesek> Telepulesek { get; set; }
 
+        public ObservableCollection<Telepulesek> TelepulesDist {  get; set; }
+
         public Telepulesek SelectedTelepules { get; set; }
 
         public TelepulesViewModel()
@@ -31,7 +33,10 @@ namespace WpfMagyarorszagDbFirst.mvvm.viewmodel
             Jogallasok=context.Jogallas.Local.ToObservableCollection();
             Megyek=context.Megyeks.Local.ToObservableCollection();
             Telepulesek=context.Telepuleseks.Local.ToObservableCollection();
+            
         }
+
+       
 
         public void DbMentes()
         {
